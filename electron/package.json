@@ -1,0 +1,23 @@
+{
+  "name": "odf-ocr",
+  "version": "2.0.0",
+  "description": "Handschrift-OCR für Stundennachweise (Öffentlicher Dienst)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "NODE_ENV=development electron .",
+    "build": "electron-builder"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "de.odf-ocr.app",
+    "productName": "odf-ocr",
+    "mac": { "category": "public.app-category.productivity", "target": ["dmg","zip"] },
+    "win": { "target": ["nsis"] },
+    "linux": { "target": ["AppImage","deb"] }
+  }
+}

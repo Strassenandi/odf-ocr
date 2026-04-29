@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.venv/
+venv/
+env/
+.env
+
+# Modelle & Gewichte (groß, nicht ins Repo)
+*.pdparams
+*.pdmodel
+*.pdiparams
+*.pt
+*.pth
+models/
+
+# Temporäre OCR-Ausgaben
+output/
+results/
+*.json
+!package.json
+!pyproject.toml
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Electron
+electron/node_modules/
+electron/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/

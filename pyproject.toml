@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "odf-ocr"
+version = "2.0.0"
+description = "Handschrift-OCR-Pipeline für Stundennachweise (Öffentlicher Dienst)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+dependencies = [
+    "paddleocr>=2.9.0",
+    "paddlepaddle>=2.6.0",
+    "transformers>=4.40.0",
+    "torch>=2.2.0",
+    "Pillow>=10.0.0",
+    "opencv-python-headless>=4.9.0",
+    "numpy>=1.26.0",
+    "flask>=3.0.0",
+    "flask-cors>=4.0.0",
+]
+
+[project.scripts]
+odf-ocr-server = "odf_ocr.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
